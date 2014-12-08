@@ -1,5 +1,7 @@
 #pragma once
 
+namespace ngn {
+
 class App
 {
 public:
@@ -9,3 +11,5 @@ public:
 
 typedef App* CreateAppFunc();
 typedef void DestroyAppFunc(App*);
+
+} // namespace ngn
