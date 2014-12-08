@@ -27,5 +27,5 @@ $ scons
 From the top level directory...
 
 ```
-$ ./runrunrun
+$ install/rrr
 ```
