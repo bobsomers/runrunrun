@@ -30,7 +30,9 @@ void loadAndRunGame()
     }
 
     // Open the game library.
-    gGameLib = dlopen("libgame.dylib", RTLD_NOW);
+    // TODO: use a cross platform wrapper to load the symbols, determine the
+    // library names, and determine the path to the executable
+    gGameLib = dlopen("install/libgame.dylib", RTLD_NOW);
     if (!gGameLib) {
         std::cerr << "Failed to open libgame: " << dlerror() << std::endl;
         std::exit(EXIT_FAILURE);
