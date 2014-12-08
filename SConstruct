@@ -9,5 +9,6 @@ Export('env')
 SConscript([
     'build/ngn/SConscript',
     'build/game/SConscript',
-    'build/rrr/SConscript'
+    'build/rrr/SConscript',
+    'build/tests/SConscript'
 ])
