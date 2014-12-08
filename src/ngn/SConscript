@@ -3,7 +3,7 @@ import sys
 Import('env')
 env = env.Clone()
 
-# Set install_name on Mac OS X so we can find the dylib.
+# Set install_name on Mac OS X so we can find the shared library.
 if sys.platform == 'darwin':
     env.AppendUnique(LINKFLAGS=['-install_name', '@executable_path/libngn.dylib'])
 
