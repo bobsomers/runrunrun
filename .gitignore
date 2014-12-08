@@ -1,3 +1,5 @@
 .sconsign.dblite
-src/*.o
-runrunrun
+*.dylib
+*.o
+*.os
+/runrunrun
