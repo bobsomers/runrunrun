@@ -1,4 +1,4 @@
-#include "rrrgame/lib.h"
+#include "game/game.h"
 
 extern "C" rrr::App* rrr_newApp()
 {

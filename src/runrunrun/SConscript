@@ -1,0 +1,7 @@
+Import('env')
+env = env.Clone()
+
+env.ParseConfig('pkg-config --cflags --libs glfw3')
+
+cmd = env.Program('runrunrun', Glob('*.cpp'))
+env.Install('#install', cmd)

@@ -1,4 +1,4 @@
-#include "rrrgame/app.h"
+#include "game/app.h"
 
 #include <iostream>
 
@@ -11,7 +11,7 @@ App::App()
 
 void App::run()
 {
-    std::cout << "CATS" << std::endl;
+    std::cout << "App::run()!" << std::endl;
 }
 
 void App::error(int /*error*/, const char* /*description*/)
