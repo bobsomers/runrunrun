@@ -1,24 +1,24 @@
 #include "game_app.h"
 
-#include <runrunrun/app.h>
+#include <ngn/app.h>
 
 #include <iostream>
 
-namespace rrr {
+namespace game {
 
 void GameApp::run()
 {
-    std::cout << "GameApp::run()" << std::endl;
+    std::cout << "game::GameApp::run()" << std::endl;
 }
 
-} // namespace rrr
+} // namespace game
 
-extern "C" App* rrr_createApp()
+extern "C" ngn::App* ngn_createApp()
 {
-    return new rrr::GameApp;
+    return new game::GameApp;
 }
 
-extern "C" void rrr_destroyApp(App* app)
+extern "C" void ngn_destroyApp(ngn::App* app)
 {
     delete app;
 }

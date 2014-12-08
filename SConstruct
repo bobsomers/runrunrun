@@ -8,6 +8,6 @@ env.AppendUnique(CCFLAGS=['-g', '-O2', '-Wall', '-Wextra', '-std=c++11'])
 Export('env')
 SConscript([
     'build/ngn/SConscript',
-#    'build/game/SConscript',
+    'build/game/SConscript',
     'build/rrr/SConscript'
 ])

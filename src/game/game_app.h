@@ -1,13 +1,13 @@
 #pragma once
 
-#include <runrunrun/app.h>
+#include <ngn/app.h>
 
-namespace rrr {
+namespace game {
 
-class GameApp : public App
+class GameApp : public ngn::App
 {
 public:
     void run() override;
 };
 
-} // namespace rrr
+} // namespace game

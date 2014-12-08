@@ -1,7 +1,13 @@
+import sys
+
 Import('env')
 env = env.Clone()
 
-env.AppendUnique(CPPPATH=['#src/runrunrun'])
+env.AppendUnique(CPPPATH=['#src/ngn'])
+
+# Set install_name on Mac OS X so we can find the shared library.
+if sys.platform == 'darwin':
+    env.AppendUnique(LINKFLAGS=['-install_name', '@executable_path/libgame.dylib'])
 
 lib = env.SharedLibrary('game', Glob('*.cpp'))
 env.Install('#install', lib)
