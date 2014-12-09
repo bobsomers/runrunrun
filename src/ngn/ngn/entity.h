@@ -21,7 +21,7 @@ public:
 private:
 	// When an entity is moved in a pool, this function is invoked.
 	// If someone is watching this class, we'll want to let them know.
-	virtual void handleChanged() = 0;
+	virtual void handleChanged(Handle handle){ this->handle = handle; };
 };
 
 } // namespace ngn

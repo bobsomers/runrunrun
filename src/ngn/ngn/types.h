@@ -51,10 +51,10 @@ public:
 
 
 /* Types ------------------------------------------------ */
-static char TYPE_NOTYPE = 0; // We need this reserved since handle ids will default to zero
-static char TYPE_LOCATION = 1;
+static const char TYPE_NOTYPE = 0; // We need this reserved since handle ids will default to zero
+static const char TYPE_LOCATION = 1;
 
-static Handle nullComponent; // Should be initialized to zero. 
+static const Handle nullHandle; // Should be initialized to zero. 
 
 typedef char EntityType;
 typedef char ComponentType;
