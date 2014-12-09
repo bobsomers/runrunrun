@@ -26,16 +26,14 @@ protected:
 
 };
 
-/*
+
 class PoolManager
 {
 public:
-	PoolManager():mNumPools(0){}
+	PoolManager(){}
 	~PoolManager(){};
 
-private:
-	unsigned mNumPools;
-	std::vector<void*> mPools;
+	virtual void* getObject(Handle handle) = 0;
 };
-*/
+
 } // namespace ngn
