@@ -10,7 +10,7 @@ public:
 	TestEntity(int someval):Entity(), someval(someval) {}
 	~TestEntity(){}
 
-	void changedId() { printf("Changed my id to %d\n", id); }
+	void handleChanged() { printf("Changed my handle's idx to %d\n", handle.idx); }
 
 	int someval;
 };
@@ -26,11 +26,12 @@ void printPool(Pool<TestEntity> pool)
 	for (unsigned idx=0; idx < pool.count(); idx++)
 	{
 		TestEntity e = pool.get(idx);
-		printf("Value: %d, ID: %d\n", e.someval, e.id);
+		printf("Value: %d, ID: %d\n", e.someval, e.handle.idx);
 	}
 }
 
 int main() {
+
 	Pool<TestEntity> pool;
 
 	// Add several entities to the pool

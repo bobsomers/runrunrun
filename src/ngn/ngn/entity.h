@@ -1,5 +1,7 @@
 #pragma once
 
+#include "types.h"
+
 namespace ngn {
 
 /*
@@ -11,7 +13,7 @@ class Entity
 {
 public:
 	bool alive;
-	unsigned id;
+	Handle handle;
 
 	Entity():alive(true){};
 	virtual ~Entity(){};
@@ -19,7 +21,7 @@ public:
 private:
 	// When an entity is moved in a pool, this function is invoked.
 	// If someone is watching this class, we'll want to let them know.
-	virtual void changedId() = 0;
+	virtual void handleChanged() = 0;
 };
 
 } // namespace ngn

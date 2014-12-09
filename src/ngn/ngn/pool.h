@@ -5,6 +5,8 @@
 
 namespace ngn {
 
+// TODO: Replace the vectors and naive mallocs with an Allocator.
+
 template <class E>
 class Pool
 {
@@ -13,8 +15,9 @@ public:
 	~Pool(){};
 
 	unsigned add(E entity);
-	E get(unsigned id);
-	void del(unsigned id);
+	E get(unsigned idx);
+	void del(unsigned idx);
+	void swap(unsigned a, unsigned b);
 
 	unsigned count(){ return mNumEntities; }
 protected:
@@ -23,4 +26,16 @@ protected:
 
 };
 
+/*
+class PoolManager
+{
+public:
+	PoolManager():mNumPools(0){}
+	~PoolManager(){};
+
+private:
+	unsigned mNumPools;
+	std::vector<void*> mPools;
+};
+*/
 } // namespace ngn
