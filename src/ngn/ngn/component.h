@@ -48,6 +48,8 @@ namespace ngn {
 
 		vec3 position;
 		vec3 velocity;
+
+		static const ComponentType TYPE = TYPE_LOCATION;
 	};
 
 
@@ -62,6 +64,8 @@ namespace ngn {
 		void handleChanged(Handle handle){ this->handle = handle; };
 
 		Component* operator[] (ComponentType type) { return this->getComponentByType(type); };
+
+		template<class E> E* getComponent();
 
 		GameObject();
 		GameObject( std::initializer_list<ComponentType> componentTypes );

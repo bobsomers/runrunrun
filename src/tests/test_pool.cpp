@@ -66,7 +66,7 @@ int main() {
 	printf("\nTesting Content Manager w/ Components.\n");
 	printf("--------------------------------------\n");
 
-	GameObject obj1, obj2, obj3;
+	GameObject obj1, obj2, obj3, obj4;
 
 	obj1.handle.idx = 1;
 
@@ -85,7 +85,9 @@ int main() {
 		(Component**)&lc
 	});
 
-	if (lc == nullptr) printf("YAY\n");
+	obj4 = GameObject({TYPE_LOCATION});
+	obj4.getComponent<LocationComponent>()->position.x = 2.5;
+
 
 	// ((LocationComponent*)c)->position.x = 10.5;
 
