@@ -1,0 +1,15 @@
+import sys
+
+Import('env')
+env = env.Clone()
+
+env.AppendUnique(CPPPATH=['#libs/entityx'])
+env.ParseConfig('pkg-config --cflags --libs glfw3')
+
+# Set up rpath on Linux so we can find the shared libraries.
+if sys.platform.startswith('linux'):
+    env.AppendUnique(LINKFLAGS=['-z', 'origin'])
+    env.AppendUnique(RPATH=env.Literal('\\$$ORIGIN'))
+
+cmd = env.Program('test_entityx', Glob('test_entityx.cpp'), LIBS=['libentityx'], LIBPATH=['#install'])
+env.Install('#install', cmd)
