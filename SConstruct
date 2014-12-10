@@ -10,6 +10,6 @@ SConscript([
  #   'build/ngn/SConscript',
  #   'build/game/SConscript',
  #   'build/rrr/SConscript',
-    'libs/entityx/SConscript',
+    'libs/SConscript',
     'src/tests/SConscript'
 ])
