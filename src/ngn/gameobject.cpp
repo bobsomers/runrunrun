@@ -53,6 +53,12 @@ Component* GameObject::getComponentByType(ComponentType type)
 	}
 }
 
+template <class E>
+E* GameObject::getComponent()
+{
+	return dynamic_cast<E*>( CONTENT_MANAGER.getComponent(E.type) );
+}
+
 void GameObject::update()
 {
 	printf("GameObject with ID %d running update\n", this->handle.id);

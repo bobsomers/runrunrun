@@ -67,7 +67,7 @@ public:
 
 		mNumEntities--;
 	};
-	
+
 	void swap(unsigned a, unsigned b)
 	{
 		E temp = mElements[a];
@@ -89,16 +89,6 @@ protected:
 	std::vector<E> mElements;
 	unsigned mNumEntities;
 
-};
-
-
-class PoolManager
-{
-public:
-	PoolManager(){}
-	~PoolManager(){};
-
-	virtual void* getObject(Handle handle) = 0;
 };
 
 } // namespace ngn
